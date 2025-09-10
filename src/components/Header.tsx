@@ -48,7 +48,10 @@ const Header: React.FC = () => {
               className={`object-contain transition-transform duration-300 group-hover:scale-105 ${
                 theme === 'dark' ? 'w-40 h-32' : 'w-52 h-44'
               }`}
-              style={{ maxWidth: theme === 'dark' ? '10rem' : '13rem', maxHeight: theme === 'dark' ? '8rem' : '11rem' }}
+              style={{
+                maxWidth: theme === 'dark' ? '10rem' : '13rem',
+                maxHeight: theme === 'dark' ? '8rem' : '11rem',
+              }}
             />
           </Link>
 
@@ -108,8 +111,8 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 ${
-            isMenuOpen ? 'max-h-56 opacity-100' : 'max-h-0 opacity-0'
-          } overflow-hidden`}
+            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          } overflow-y-auto`}
         >
           <div className="pt-3 pb-2 space-y-3">
             {navItems.map((item) => (
