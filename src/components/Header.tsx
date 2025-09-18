@@ -45,12 +45,10 @@ const Header: React.FC = () => {
             <img
               src={theme === 'dark' ? '/logo2.svg' : '/logo1.png'}
               alt="Logo"
-              className={`object-contain transition-transform duration-300 group-hover:scale-105 ${
-                theme === 'dark' ? 'w-40 h-32' : 'w-52 h-44'
-              }`}
+              className="object-contain transition-transform duration-300 group-hover:scale-105 w-52 h-44"
               style={{
-                maxWidth: theme === 'dark' ? '10rem' : '13rem',
-                maxHeight: theme === 'dark' ? '8rem' : '11rem',
+                maxWidth: '13rem',
+                maxHeight: '11rem',
               }}
             />
           </Link>
