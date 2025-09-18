@@ -42,13 +42,15 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img
+           <img
               src={theme === 'dark' ? '/logo2.svg' : '/logo1.png'}
               alt="Logo"
-              className="object-contain transition-transform duration-300 group-hover:scale-105 w-52 h-44"
+              className={`object-contain transition-transform duration-300 group-hover:scale-105 ${
+                theme === 'dark' ? 'w-32 h-16 md:w-40 md:h-20' : 'w-44 h-20 md:w-56 md:h-28'
+              }`}
               style={{
-                maxWidth: '13rem',
-                maxHeight: '11rem',
+                maxWidth: theme === 'dark' ? '10rem' : '14rem',
+                maxHeight: theme === 'dark' ? '5rem' : '7rem',
               }}
             />
           </Link>

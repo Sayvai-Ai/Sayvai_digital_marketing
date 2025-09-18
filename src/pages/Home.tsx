@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <div className="relative z-10" ref={sectionRef}>
       {/* Hero Section */}
-<section className="bg-slate-100 dark:bg-slate-900 pt-36 md:pt-32 pb-20 md:pb-32">
+<section className="bg-slate-100 dark:bg-slate-900 py-20 md:py-32">
   <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     {/* Text Content */}
     <div className="fade-on-scroll">
