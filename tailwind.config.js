@@ -5,5 +5,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // @tailwindcss/line-clamp is now built-in to Tailwind CSS v3.3+
+  ],
 };

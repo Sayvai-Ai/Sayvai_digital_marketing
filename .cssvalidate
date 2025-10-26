@@ -1,0 +1,12 @@
+# CSS Validation Rules
+# Suppress Tailwind CSS directive warnings
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@apply;
+@layer;
+@screen;
+
+# Allow these CSS at-rules
+unknownAtRules: ignore

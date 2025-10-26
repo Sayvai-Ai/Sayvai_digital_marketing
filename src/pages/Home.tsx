@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Zap, Share2, Edit3 } from 'lucide-react';
 
@@ -277,6 +277,81 @@ const Home = () => {
               Contact Us
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Clients Section */}
+      <section className="py-20 bg-white dark:bg-gray-900 overflow-hidden">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Happy <span className="text-[#00C0A3] dark:text-[#3ABEF9]">Clients</span>
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-6">
+            Trusted by leading brands and innovative companies worldwide
+          </p>
+        </div>
+
+        {/* Infinite Scroll Container - Full Width */}
+        <div className="relative w-full overflow-hidden py-4">
+          <div className="flex">
+            {/* First set */}
+            <div className="flex animate-scroll-infinite shrink-0">
+              {[
+                { name: 'Atalantiis', logo: '/Atalantiis logo.jpg' },
+                { name: 'Minerva Vidhya Mandhir', logo: '/Minervaa loop.png' },
+                { name: 'Suvai and Kavya', logo: '/suvai and kavya loop.jpg' },
+                { name: 'Shridha Investment', logo: '/shridha loop.png' },
+                { name: 'SVS Events', logo: '/svs loop.jpg' },
+                { name: 'Sri Enippagam', logo: '/enippagam loop.png' },
+                { name: 'MS Builders', logo: '/ms logo loop.png' },
+                { name: 'Femi9', logo: '/femi9 loop.png' },
+                { name: 'HiFi Trendz', logo: '/hifi loop.jpeg' },
+              ].map((client, index) => (
+                <div
+                  key={`set1-${index}`}
+                  className="flex-shrink-0 flex items-center justify-center mx-8"
+                >
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className={`w-auto object-contain transition-all duration-500 ${
+                      client.name === 'Minerva Vidhya Mandhir' ? 'h-40' : 'h-28'
+                    }`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+            
+            {/* Duplicate set for seamless loop */}
+            <div className="flex animate-scroll-infinite shrink-0">
+              {[
+                { name: 'Atalantiis', logo: '/Atalantiis logo.jpg' },
+                { name: 'Minerva Vidhya Mandhir', logo: '/Minervaa loop.png' },
+                { name: 'Suvai and Kavya', logo: '/suvai and kavya loop.jpg' },
+                { name: 'Shridha Investment', logo: '/shridha loop.png' },
+                { name: 'SVS Events', logo: '/svs loop.jpg' },
+                { name: 'Sri Enippagam', logo: '/enippagam loop.png' },
+                { name: 'MS Builders', logo: '/ms logo loop.png' },
+                { name: 'Femi9', logo: '/femi9 loop.png' },
+                { name: 'HiFi Trendz', logo: '/hifi loop.jpeg' },
+              ].map((client, index) => (
+                <div
+                  key={`set2-${index}`}
+                  className="flex-shrink-0 flex items-center justify-center mx-8"
+                >
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className={`w-auto object-contain transition-all duration-500 ${
+                      client.name === 'Minerva Vidhya Mandhir' ? 'h-40' : 'h-28'
+                    }`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
