@@ -3,8 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Zap, Share2, Edit3 } from 'lucide-react';
 
-// import LogoLoop from '../components/LogoLoop/LogoLoop';
-
 const Home = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   // State to track the currently open FAQ item. 'null' means no item is open.

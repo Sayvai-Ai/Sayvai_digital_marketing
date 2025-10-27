@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface Particle {
   x: number;
@@ -13,7 +13,7 @@ interface Particle {
   rotationSpeed: number;
 }
 
-export const ParticleBackground = () => {
+const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
@@ -172,3 +172,5 @@ export const ParticleBackground = () => {
     />
   );
 };
+
+export default ParticleBackground;
