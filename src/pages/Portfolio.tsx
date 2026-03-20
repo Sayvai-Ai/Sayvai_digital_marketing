@@ -1,12 +1,7 @@
-import React, { useState, useRef } from 'react';
-<<<<<<< HEAD
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import jsPDF from 'jspdf';
-=======
-import { Link } from 'react-router-dom'; // 
 import { ExternalLink, Eye } from 'lucide-react';
 import { useSEO } from '../hooks/useSEO';
->>>>>>> 2be588b (redeploy)
 
 const Portfolio: React.FC = () => {
   useSEO({
