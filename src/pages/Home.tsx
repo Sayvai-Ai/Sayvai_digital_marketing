@@ -10,7 +10,7 @@ const Home = () => {
   useSEO({
     title: 'SAYVAI - Digital Marketing Agency | SEO & Social Media Marketing',
     description: 'Drive growth and maximize your online presence with our data-driven digital marketing strategies. From SEO to social media, we help businesses succeed in the digital landscape.',
-    keywords: 'digital marketing agency, SEO services, social media marketing, PPC advertising, content creation',
+    keywords: 'digital marketing agency, SEO services, social media marketing, PPC advertising, content creation, Meta ad services, Google My Business setup, analytics and reporting ',
     canonicalUrl: 'https://sayvai.com/',
   });
 
