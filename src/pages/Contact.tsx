@@ -3,9 +3,15 @@ import React, { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 import { motion, Variants, easeOut } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-
+import { useSEO } from '../hooks/useSEO';
 
 const Contact = () => {
+  useSEO({
+    title: 'Contact SAYVAI - Get Your Digital Marketing Strategy',
+    description: 'Contact SAYVAI to discuss your digital marketing needs. Reach out today for a free consultation and let us help your business grow online.',
+    keywords: 'contact digital marketing, marketing consultation, get in touch',
+    canonicalUrl: 'https://sayvai.com/contact',
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

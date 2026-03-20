@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { lazy, Suspense } from 'react';
 
-// Regular imports for core components
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
-// Lazy load components
+// Lazy load page components
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
@@ -18,6 +17,7 @@ const Blogs = lazy(() => import('./pages/Blogs'));
 const BlogDetails = lazy(() => import('./pages/BlogDetails'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Solution = lazy(() => import('./pages/Solution'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 const ParticleBackground = lazy(() => import('./components/ParticleBackground'));
 const WaveBackground = lazy(() => import('./components/WaveBackground'));
 const ChatBot = lazy(() => import('./components/ChatBot/ChatBot'));
@@ -54,18 +54,19 @@ function App() {
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/blogs/:id" element={<BlogDetails />} />
                 <Route path="/contact" element={<Contact />} />
+              <Route path="/sitemap" element={<Sitemap />} />
 
-                {/* Fallback for unknown routes */}
-                <Route
-                  path="*"
-                  element={
-                    <h1 className="text-center py-20 text-red-500">
-                      404 - Page Not Found
-                    </h1>
-                  }
-                />
-              </Routes>
-            </Suspense>
+              {/* Fallback for unknown routes */}
+              <Route
+                path="*"
+                element={
+                  <h1 className="text-center py-20 text-red-500">
+                    404 - Page Not Found
+                  </h1>
+                }
+              />
+            </Routes>
+          </Suspense>
           </main>
 
           {/* Waves at the bottom */}

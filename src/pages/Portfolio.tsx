@@ -1,8 +1,20 @@
 import React, { useState, useRef } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import jsPDF from 'jspdf';
+=======
+import { Link } from 'react-router-dom'; // 
+import { ExternalLink, Eye } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
+>>>>>>> 2be588b (redeploy)
 
 const Portfolio: React.FC = () => {
+  useSEO({
+    title: 'Portfolio - SAYVAI Digital Marketing Projects',
+    description: 'View our portfolio of successful digital marketing projects. See case studies and results from brands we have helped grow their online presence.',
+    keywords: 'portfolio, digital marketing projects, case studies, marketing results',
+    canonicalUrl: 'https://sayvai.com/portfolio',
+  });
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [ripples, setRipples] = useState<Array<{ x: number; y: number; id: number }>>([]);
   const rippleId = useRef(0);

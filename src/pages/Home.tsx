@@ -2,8 +2,33 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, Award, Zap, Share2, Edit3 } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
+import { useSchemaMarkup } from '../hooks/useSchemaMarkup';
 
 const Home = () => {
+  // SEO Hook
+  useSEO({
+    title: 'SAYVAI - Digital Marketing Agency | SEO & Social Media Marketing',
+    description: 'Drive growth and maximize your online presence with our data-driven digital marketing strategies. From SEO to social media, we help businesses succeed in the digital landscape.',
+    keywords: 'digital marketing agency, SEO services, social media marketing, PPC advertising, content creation',
+    canonicalUrl: 'https://sayvai.com/',
+  });
+
+  // Schema Markup
+  useSchemaMarkup({
+    type: 'WebPage',
+    data: {
+      name: 'SAYVAI - Digital Marketing Agency',
+      description: 'Professional digital marketing agency specializing in SEO, social media marketing, content creation, and PPC advertising.',
+      url: 'https://sayvai.com/',
+      isPartOf: {
+        '@type': 'Website',
+        name: 'SAYVAI Digital Marketing',
+        url: 'https://sayvai.com',
+      },
+    },
+  });
+  
   const sectionRef = useRef<HTMLDivElement>(null);
   // State to track the currently open FAQ item. 'null' means no item is open.
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

@@ -1,16 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Users, PenTool, TrendingUp, Target, BarChart3 } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
-// Function to safely convert service titles to URL-friendly slugs
-const slugify = (text: string) =>
-  text
-    .toLowerCase()
-    .replace(/&/g, 'and')       // replace & with 'and'
-    .replace(/[^\w\s-]/g, '')  // remove other special characters
-    .replace(/\s+/g, '-');      // replace spaces with '-'
-
-// Updated services array with slug keys to match slugify logic
+// Services array with slug keys
 const services = [
   {
     icon: Search,
@@ -63,6 +55,13 @@ const services = [
 ];
 
 const Services: React.FC = () => {
+  useSEO({
+    title: 'Digital Marketing Services - SAYVAI',
+    description: 'Professional digital marketing services including SEO, social media marketing, PPC advertising, content creation, and more to grow your business online.',
+    keywords: 'digital marketing services, SEO, social media marketing, PPC advertising, content marketing',
+    canonicalUrl: 'https://sayvai.com/services',
+  });
+  
   return (
     <div className="pt-20 relative z-10">
       {/* Hero Section with Background Image */}

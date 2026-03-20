@@ -2,6 +2,8 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowLeft } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
+import { useSchemaMarkup } from '../hooks/useSchemaMarkup';
 
 interface Blog {
   id: number;
@@ -234,6 +236,34 @@ const BlogDetails: React.FC = () => {
   const navigate = useNavigate();
   const blogId = Number(id);
   const blog = blogs.find((b) => b.id === blogId);
+
+  // SEO and Schema Markup
+  if (blog) {
+    useSEO({
+      title: `${blog.title} | SAYVAI Digital Marketing Blog`,
+      description: blog.excerpt,
+      keywords: `${blog.category}, digital marketing, ${blog.title.toLowerCase()}`,
+      ogImage: blog.image,
+      ogType: 'article',
+      ogUrl: `https://sayvai.com/blogs/${blog.id}`,
+      canonicalUrl: `https://sayvai.com/blogs/${blog.id}`,
+    });
+
+    useSchemaMarkup({
+      type: 'Article',
+      data: {
+        headline: blog.title,
+        description: blog.excerpt,
+        image: blog.image,
+        author: {
+          '@type': 'Person',
+          name: blog.author,
+        },
+        datePublished: blog.date,
+        articleBody: blog.excerpt,
+      },
+    });
+  }
 
   if (!blog) {
     return (

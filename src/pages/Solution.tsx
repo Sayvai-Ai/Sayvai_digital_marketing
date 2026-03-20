@@ -1,8 +1,15 @@
 // src/pages/Solution.tsx
 import React from "react";
 import { motion } from "framer-motion";
+import { useSEO } from '../hooks/useSEO';
 
 const Solution = () => {
+  useSEO({
+    title: 'Solutions - SAYVAI Digital Marketing',
+    description: 'Comprehensive digital marketing solutions tailored to your business needs. Discover how SAYVAI can help solve your marketing challenges.',
+    keywords: 'marketing solutions, digital marketing strategy, business growth',
+    canonicalUrl: 'https://sayvai.com/solution',
+  });
   return (
     <section id="solution" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container mx-auto px-4">

@@ -1,0 +1,35 @@
+# Robots.txt file for SAYVAI Digital Marketing
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.next/
+Disallow: /.vite/
+Disallow: /build/
+Disallow: /dist/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap locations
+Sitemap: https://sayvai.com/sitemap.xml
+Sitemap: https://sayvai.com/sitemap
+# Replace with your actual domain if different
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

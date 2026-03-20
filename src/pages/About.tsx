@@ -1,7 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Users, Target, Lightbulb, Award } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 const About = () => {
+  useSEO({
+    title: 'About SAYVAI - Digital Marketing Agency',
+    description: 'Learn about SAYVAI, a professional digital marketing agency dedicated to helping businesses grow their online presence through proven strategies and innovative solutions.',
+    keywords: 'about digital marketing, digital marketing agency, marketing strategy, brand growth',
+    canonicalUrl: 'https://sayvai.com/about',
+  });
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

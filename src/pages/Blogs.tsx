@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 interface Blog {
   id: number;
@@ -16,6 +17,13 @@ interface Blog {
 }
 
 const Blogs: React.FC = () => {
+  useSEO({
+    title: 'Blog - Digital Marketing Insights | SAYVAI',
+    description: 'Read our latest articles and insights on digital marketing trends, strategies, and best practices to help grow your business online.',
+    keywords: 'digital marketing blog, marketing insights, digital strategy, marketing tips',
+    canonicalUrl: 'https://sayvai.com/blogs',
+  });
+  
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { motion } from 'framer-motion';
+import { useSEO } from '../hooks/useSEO';
+import { useSchemaMarkup } from '../hooks/useSchemaMarkup';
 
 // Service data with full content
 export const serviceData: Record<string, any> = {
@@ -212,6 +214,28 @@ Analytics and reporting turn raw data into insights. Reporting shows **what happ
 const ServiceDetails: React.FC = () => {
   const { serviceSlug } = useParams();
   const service = serviceSlug ? serviceData[serviceSlug] : null;
+
+  // SEO and Schema Markup
+  if (service) {
+    useSEO({
+      title: `${service.title} - SAYVAI Digital Marketing Services`,
+      description: service.description,
+      keywords: `${service.title}, digital marketing, ${serviceSlug}`,
+      canonicalUrl: `https://sayvai.com/services/${serviceSlug}`,
+    });
+
+    useSchemaMarkup({
+      type: 'Service',
+      data: {
+        name: service.title,
+        description: service.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'SAYVAI Digital Marketing',
+        },
+      },
+    });
+  }
 
   if (!service) {
     return <p className="text-center py-20 text-red-500 text-xl dark:text-white">Service not found!</p>;

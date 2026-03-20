@@ -2,12 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Replace default Vite favicon with your logo -->
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+    
+    <!-- Viewport and Basic Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DigitalFlow - Professional digital marketing agency specializing in SEO, social media, content creation, and brand strategy." />
-    <meta name="keywords" content="digital marketing, SEO, social media marketing, content creation, PPC advertising, brand strategy" />
-    <title>SAYVAI - Digital Marketing </title>
+    <meta name="theme-color" content="#1B2A41" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <!-- Core SEO Meta Tags -->
+    <meta name="description" content="SAYVAI - Professional digital marketing agency specializing in SEO, social media marketing, content creation, PPC advertising, and brand strategy. Grow your business online with proven strategies." />
+    <meta name="keywords" content="digital marketing agency, SEO services, social media marketing, PPC advertising, content creation, brand strategy, local SEO, Google My Business, analytics" />
+    <meta name="author" content="SAYVAI Digital Marketing" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SAYVAI - Professional Digital Marketing Solutions" />
+    <meta property="og:description" content="Drive growth and maximize your online presence with our data-driven digital marketing strategies. From SEO to social media, we help businesses succeed in the digital landscape." />
+    <meta property="og:url" content="https://sayvai.com/" />
+    <meta property="og:image" content="/logo.jpg" />
+    <meta property="og:site_name" content="SAYVAI Digital Marketing" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SAYVAI - Professional Digital Marketing Solutions" />
+    <meta name="twitter:description" content="Drive growth and maximize your online presence with our data-driven digital marketing strategies." />
+    <meta name="twitter:image" content="/logo.jpg" />
+    
+    <!-- Canonical Tags -->
+    <link rel="canonical" href="https://sayvai.com/" />
+    
+    <!-- Sitemap and RSS Feed -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="sitemap" type="text/html" href="/sitemap" />
+    
+    <!-- Preconnect to External Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://images.pexels.com" />
+
+    <!-- JSON-LD Schema Markup for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SAYVAI Digital Marketing",
+      "url": "https://sayvai.com",
+      "logo": "https://sayvai.com/logo.jpg",
+      "description": "Professional digital marketing agency specializing in SEO, social media marketing, content creation, PPC advertising, and brand strategy.",
+      "sameAs": [
+        "https://www.facebook.com/sayvai",
+        "https://www.instagram.com/sayvai",
+        "https://www.linkedin.com/company/sayvai",
+        "https://www.twitter.com/sayvai"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "info@sayvai.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SAYVAI Digital Marketing",
+      "image": "https://sayvai.com/logo.jpg",
+      "description": "Professional digital marketing agency specializing in SEO, social media marketing, content creation, PPC advertising, and brand strategy.",
+      "priceRange": "$$",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "url": "https://sayvai.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD Schema Markup for Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SAYVAI - Digital Marketing Agency",
+      "url": "https://sayvai.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://sayvai.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Title -->
+    <title>SAYVAI - Digital Marketing Agency | SEO & Social Media Marketing</title>
   </head>
   <body>
     <div id="root"></div>
